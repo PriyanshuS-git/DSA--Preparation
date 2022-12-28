@@ -1,5 +1,17 @@
 GFG LINK:https://practice.geeksforgeeks.org/problems/triangle-pattern-1661492263/1
 
+
+Pattern:
+
+
+    *
+   ***  
+  *****
+ *******
+*********
+
+
+
 CODE:
 
 //{ Driver Code Starts
@@ -29,5 +41,32 @@ class Solution {
             cout << endl;
 
         }
+    }
+};
+
+Method -2
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+  public:
+    void printTriangle(int n) {
+        
+    for(int row = 1 ; row<=n;row++)
+    {
+        int no_of_space = n - row;
+        
+        for(int s=1 ; s <= no_of_space ; s++){
+           cout<< " ";
+        }  
+        for(int col =1 ; col <= 2*row - 1; col++)
+          {
+              cout<<"*";
+          }
+          cout<< endl;
+    }
+    
     }
 };
