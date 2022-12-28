@@ -1,0 +1,35 @@
+GFG LINK:https://practice.geeksforgeeks.org/problems/triangle-pattern-1661493231/1
+
+Pattern:
+
+*********
+ *******
+  *****
+   ***
+    *
+
+
+code:
+
+class Solution{
+public:
+	
+	void printTriangle(int n) {
+	    // code here
+	    
+	        
+    for(int row = 0 ; row< n;row++)
+    {
+        
+        for(int s=0 ; s < row ; s++){
+           cout<<" ";
+        }  
+        for(int col = 2*(n-row-1)+1 ; col > 0; col--)
+          {
+              cout<<"*";
+          }
+          cout<< endl;
+    }
+	}
+};
+
