@@ -1,0 +1,28 @@
+GFG LINK: https://practice.geeksforgeeks.org/problems/square-pattern-1662666141/1
+
+PATTERN:
+
+4 4 4 4 4 4 4
+4 3 3 3 3 3 4
+4 3 2 2 2 3 4
+4 3 2 1 2 3 4
+4 3 2 2 2 3 4
+4 3 3 3 3 3 4
+4 4 4 4 4 4 4
+
+CODE:
+
+class Solution {
+  public:
+    void printSquare(int n) {
+        // code here
+       for(int row=1;row< 2*n ;row++)
+         {
+             for(int col= 1; col< 2*n ;col++)
+             {
+                 cout<<max(abs(n-row)+1, abs(n-col)+1)<<" ";
+             }
+             cout<<endl;
+         }
+    }
+};
