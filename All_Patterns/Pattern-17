@@ -1,0 +1,47 @@
+GFG LINK: https://practice.geeksforgeeks.org/problems/triangle-pattern-1662285911/1
+
+PATTERN:
+   A
+  ABA
+ ABCBA
+ABCDCBA
+
+CODE:
+
+class Solution {
+  public:
+    void printTriangle(int n) {
+        // code here
+        
+        for(int row=1; row<= n;row++)
+        {
+            int var=65 ;
+            int colCount=0;
+            for(int space=0;space< n- row;space++)
+            {
+                cout<<" ";
+            }
+            for(int col= 1 ;col<=row;col++)
+            {
+                
+                cout<<char(var);
+                var++;
+                colCount++;
+               
+            }
+            if(2* colCount -1> row)
+            {
+                var--;
+              for(int col=1;col< colCount;col++)
+              {
+                var--;
+                cout<<char(var);
+                
+              }
+            }
+            cout<<endl;
+            
+            
+        }
+    }
+};
