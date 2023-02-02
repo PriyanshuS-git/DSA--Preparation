@@ -7,20 +7,27 @@ CODE -
 
 Method 1
 
-#include<bits/stdc++.h>
-
+//{ Driver Code Starts
+#include<bits/stdc++.h> 
 using namespace std;
 
-int count_digits( int n )
-{
-   int x = n; int count =0;
-   while( x !=0 ) 
-   {
-       x = x / 10;
-       count++;
-   }
-   return count;
-}
+// } Driver Code Ends
+class Solution{
+public:
+    int evenlyDivides(int N){
+       int n = N ;
+        int flag = 0;
+        while (n>0)
+        {
+        int digit = 0;
+            digit = n%10;
+            n /= 10;
+        if(digit>0 && N%digit==0)  //Checking if zero
+          flag+=1;
+        }
+        return flag;
+    }
+};
 
 Method 2
 
