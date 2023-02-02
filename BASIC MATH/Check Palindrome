@@ -1,0 +1,81 @@
+GFG LINK - https://practice.geeksforgeeks.org/problems/palindrome0746/1
+
+CODE-
+
+//{ Driver Code Starts
+//Initial Template for C++
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+//User function Template for C++
+
+class Solution
+{
+	public:
+		string is_palindrome(int n)
+		{
+		    // Code here.
+		    int m = n;
+		   int rev = 0;
+		   
+		   while( m > 0)
+		   {
+		       int dig = m % 10;
+		       
+		       rev = (rev*10) + dig;
+		       
+		       m = m /10;
+		   }
+		   
+		   if(rev == n){
+		     return "Yes";
+		   }
+		   else{
+		     return  "No";
+		   }
+		}
+		
+		
+
+
+LEETCODE LINK - https://leetcode.com/problems/palindrome-number/submissions/889885770/
+
+CODE - 
+
+
+class Solution {
+public:
+    bool isPalindrome(int x) {
+       
+       long long int copy = x;
+       long long int rev = 0;
+
+       while(x >0)
+       {
+           long long int rem;
+
+           rem = x % 10;
+           rev = (rev*10) + rem;
+
+           x = x / 10;
+       }
+
+       bool check = false;
+
+       if(x < 0)
+       {
+           return check;
+       }
+       else if(rev ==  copy)
+          {
+              check = true;
+              return check;
+          }else return check;
+         
+    }
+};
+
+
