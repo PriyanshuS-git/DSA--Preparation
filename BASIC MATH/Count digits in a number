@@ -1,0 +1,48 @@
+GFG LINK- https://practice.geeksforgeeks.org/problems/count-digits5716/1
+
+
+
+
+CODE -
+
+Method 1
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int count_digits( int n )
+{
+   int x = n; int count =0;
+   while( x !=0 ) 
+   {
+       x = x / 10;
+       count++;
+   }
+   return count;
+}
+
+Method 2
+
+ int count =0;
+         while( N >0 ) 
+         {
+            int last_digit = N %10;
+            count++;
+            N = N/10;
+         }
+         return count;
+         
+   Method 3
+   
+   #include<bits/stdc++.h>
+
+using namespace std;
+
+int count_digits( int n )
+{
+  string x = to_string(n);
+  return x.length(); 
+}
+
+         
