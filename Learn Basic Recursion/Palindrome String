@@ -1,0 +1,37 @@
+GFG LINK - https://practice.geeksforgeeks.org/problems/palindrome-string0817/1
+
+CODE -
+
+
+//{ Driver Code Starts
+ 
+#include <bits/stdc++.h>
+using namespace std;
+
+
+// } Driver Code Ends
+//User function template for C++
+class Solution{
+public:	
+	
+	
+	int isPalindrome(string S)
+	{
+	    // Your code goes here
+	    int low = 0;
+    int high = S.length() - 1;
+ 
+    while (low < high)
+    {
+        // if mismatch happens
+        if (S[low] != S[high])
+            return 0;
+ 
+        low++;
+        high--;
+    }
+ 
+    return 1;
+}
+
+};
