@@ -1,0 +1,31 @@
+GFG LINK - https://practice.geeksforgeeks.org/problems/reversal-algorithm5340/1
+
+CODE -
+
+//{ Driver Code Starts
+//Initial template for C++
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+//User function template for C++
+
+class Solution{   
+public:
+    void reverse(int arr[],int l,int h)
+    {
+        while(l < h)
+        {
+            swap(arr[l],arr[h]);
+            l++;
+            h--;
+        }
+    }
+    void leftRotate(int arr[], int n, int d) {
+        // code here
+        reverse(arr, 0, d-1);
+        reverse(arr, d, n-1);
+        reverse(arr, 0, n-1);
+    }
+};
