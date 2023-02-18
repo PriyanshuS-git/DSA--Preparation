@@ -1,0 +1,38 @@
+GFG LINK - https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/1
+
+CODE -
+
+//{ Driver Code Starts
+#include<bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+
+int find_first(int arr[],int n,int x){
+    for(int i=0;i<n;i++){
+        if(arr[i]==x){
+            return i;
+        }
+    }
+    return -1;
+}
+int find_last(int arr[],int n,int x){
+    for(int i=n-1;i>=0;i--){
+        if(arr[i]==x){
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+
+vector<int> find(int arr[], int n , int x )
+{
+    // code here
+    
+     vector<int> v;
+    v.push_back(find_first(arr,n,x));
+    v.push_back(find_last(arr,n,x));
+    return v;
+}
