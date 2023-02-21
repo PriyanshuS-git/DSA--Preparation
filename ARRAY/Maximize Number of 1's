@@ -1,0 +1,41 @@
+GFG LINK - https://practice.geeksforgeeks.org/problems/maximize-number-of-1s0905/1
+
+
+CODE -
+
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+// } Driver Code Ends
+class Solution{
+public:
+    // m is maximum of number zeroes allowed to flip
+    // n is size of array
+    int findZeroes(int arr[], int n, int m) {
+        // code here
+        
+        int sum = 0;
+        int count = 0;
+        int s = 0;
+        
+        for(int e = 0;e<n;e++)
+        {
+            if(arr[e] == 0)
+               count++;
+               
+              while(count>m)
+              {
+                  if(arr[s] == 0)
+                  {
+                    count--;
+                  }
+                  s++;
+              }
+              sum = max(sum,e-s+1);
+        }
+        return sum;
+    }  
+};
