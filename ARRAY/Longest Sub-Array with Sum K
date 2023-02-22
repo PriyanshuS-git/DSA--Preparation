@@ -1,0 +1,52 @@
+GFG LINK - https://practice.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
+
+CODE -
+
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+
+// } Driver Code Ends
+class Solution{
+    public:
+    int lenOfLongSubarr(int A[],  int N, int K) 
+    { 
+        // Complete the function
+        
+     // unordered_map 'um' implemented
+    // as hash table
+    unordered_map<int, int> um;
+    int sum = 0, maxLen = 0;
+ 
+    // traverse the given array
+    for (int i = 0; i < N; i++) {
+ 
+        // accumulate sum
+        sum += A[i];
+ 
+        // when subarray starts from index '0'
+        if (sum == K)
+            maxLen = i + 1;
+ 
+        // make an entry for 'sum' if it is
+        // not present in 'um'
+        if (um.find(sum) == um.end())
+            um[sum] = i;
+ 
+        // check if 'sum-k' is present in 'um'
+        // or not
+        if (um.find(sum - K) != um.end()) {
+ 
+            // update maxLength
+            if (maxLen < (i - um[sum - K]))
+                maxLen = i - um[sum - K];
+        }
+    }
+ 
+    // required maximum length
+    return maxLen;
+        
+    } 
+
+};
