@@ -1,0 +1,22 @@
+GFG LINK -  https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
+
+CODE -
+
+
+//{ Driver Code Starts
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+// } Driver Code Ends
+class Solution
+{
+    public:
+    void sort012(int a[], int n)
+    {
+        // code here 
+        sort(a,a+n);
+    }
+    
+};
