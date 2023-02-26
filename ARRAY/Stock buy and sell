@@ -1,0 +1,37 @@
+GFG LINK - https://practice.geeksforgeeks.org/problems/stock-buy-and-sell2615/0
+
+CODE -
+
+} Driver Code Ends
+
+
+// User function template for C++
+
+// This function finds the buy sell schedule for maximum profit
+void stockBuySell(int price[], int n) {
+    // code here
+    
+    int curr = 0;
+    
+    int flag = 0;
+    
+    for(int i=1;i<n;i++)
+    {
+        while(i<n && price[i] >price[i-1])
+        
+        {
+            i++;
+        }
+        if(curr != i-1)
+        {
+            cout<<"("<<curr<<" "<<i-1<<")"<<" ";
+            flag=1;
+        }
+        curr=i;
+    }
+    if(flag ==0)
+      cout<<"No Profit";
+    
+    cout<<endl;  
+}
+
