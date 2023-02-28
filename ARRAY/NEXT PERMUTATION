@@ -1,0 +1,37 @@
+GFG LINK - https://practice.geeksforgeeks.org/problems/next-permutation5226/1
+
+CODE -
+
+METHOD - 1
+
+//{ Driver Code Starts
+// Initial Template for C++
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+// User function Template for C++
+
+class Solution{
+public:
+    vector<int> nextPermutation(int N, vector<int> arr){
+        // code here
+        bool res = next_permutation(arr.begin(),arr.end());
+        
+       if(res)
+       {
+           return arr;
+       }
+       else{
+           sort(arr.begin(),arr.end());
+           return arr;
+           
+       }
+         
+    }    
+      
+};
+
+
+
