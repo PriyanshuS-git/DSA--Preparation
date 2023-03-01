@@ -1,0 +1,38 @@
+GFG LINK - https://practice.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1
+
+CODE -
+
+//{ Driver Code Starts
+// C++ program to remove recurring digits from
+// a given number
+#include <bits/stdc++.h>
+using namespace std;
+
+
+// } Driver Code Ends
+    
+
+class Solution{
+    //Function to find the leaders in the array.
+    public:
+    vector<int> leaders(int a[], int n){
+        // Code here
+        
+        vector<int>v;
+        
+        int greatest = a[n-1];
+        
+        for(int i= n-1;i>=0;i--)
+        {
+            if(a[i]>= greatest)
+            {
+                v.push_back(a[i]);
+                greatest = a[i];
+            }
+        }
+        
+        reverse(v.begin(),v.end());
+        
+        return v;
+    }
+};
