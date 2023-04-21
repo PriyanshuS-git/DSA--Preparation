@@ -1,0 +1,53 @@
+GFG LINK - https://practice.geeksforgeeks.org/problems/check-if-strings-are-rotations-of-each-other-or-not-1587115620/1
+
+CODE -
+
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+
+// } Driver Code Ends
+
+class Solution
+{
+    public:
+    //Function to check if two strings are rotations of each other or not.
+    bool areRotations(string s1,string s2)
+    {
+        // Your code here
+        if (s1.length() != s2.length())
+        return false;
+  /*
+  What is string::npos:
+
+It is a constant static member value with the highest possible value for an element of type size_t.
+It actually means until the end of the string.
+It is used as the value for a length parameter in the string’s member functions.
+As a return value, it is usually used to indicate no matches.
+  */
+    string temp = s1 + s1;
+    return (temp.find(s2) != string::npos);
+    }
+};
+
+//{ Driver Code Starts.
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        string s1;
+        string s2;
+        cin>>s1>>s2;
+        Solution obj;
+        cout<<obj.areRotations(s1,s2)<<endl;
+
+    }
+    return 0;
+}
+
+// } Driver Code Ends
+
